@@ -1,0 +1,7 @@
+spring:
+    application:
+        name: springboot3-starter
+    threads:
+        virtual:
+            enabled: true   # Tomcat 에 Java 21 가상 스레드 적용
+
