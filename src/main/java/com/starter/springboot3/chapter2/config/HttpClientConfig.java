@@ -24,7 +24,7 @@ public class HttpClientConfig {
 
         HttpServiceProxyFactory factory =
                 HttpServiceProxyFactory.builder()
-                        .exchangeAdapter(RestTemplateAdapter.create(jsonPlaceholderRestTemplate()))
+                        .exchangeAdapter(RestTemplateAdapter.create(jsonPlaceholderRestTemplate))
                         .build();
         return factory.createClient(JsonPlaceholderClient.class);
     }

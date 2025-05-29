@@ -1,5 +1,6 @@
 package com.starter.springboot3.chapter2.api.controller;
 
+import com.starter.springboot3.chapter2.api.controller.dto.CreateOrderRequest;
 import com.starter.springboot3.chapter2.api.controller.dto.OrderRequestDto;
 import com.starter.springboot3.chapter2.api.controller.dto.OrderResponseDto;
 
@@ -13,4 +14,7 @@ public interface OrderServiceClient {
 
     @PostExchange("/api/orders")
     Mono<OrderResponseDto> createOrder(@RequestBody OrderRequestDto orderRequest);
+    
+    @PostExchange("/api/orders/exception")
+    String createOrderWithException(@RequestBody CreateOrderRequest request);
 }
