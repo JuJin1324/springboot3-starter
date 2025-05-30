@@ -5,3 +5,11 @@ spring:
         virtual:
             enabled: true   # Tomcat 에 Java 21 가상 스레드 적용
 
+# Actuator 엔드포인트 활성화
+management:
+    endpoints:
+        web:
+            exposure:
+                include: health,info,metrics,prometheus,env,beans,mappings,httpexchanges,observations
+        health:
+            show-details: always
